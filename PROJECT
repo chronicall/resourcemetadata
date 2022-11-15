@@ -1,0 +1,16 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+projectName: resourcemetadata
+repo: example.com/resourcemetadata
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: resource
+  kind: Resource
+  path: example.com/resourcemetadata/api/v1alpha1
+  version: v1alpha1
+version: "3"

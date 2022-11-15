@@ -1,0 +1,20 @@
+# permissions for end users to view resources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: resource-viewer-role
+rules:
+- apiGroups:
+  - resource.example.com
+  resources:
+  - resources
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - resource.example.com
+  resources:
+  - resources/status
+  verbs:
+  - get

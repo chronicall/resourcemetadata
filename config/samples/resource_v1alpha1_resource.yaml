@@ -1,0 +1,20 @@
+apiVersion: resource.example.com/v1alpha1
+kind: Resource
+metadata:
+  name: resource-sample
+spec:
+  template:
+    metadata:
+      name: resourcepod
+      namespace: default
+      labels:
+        app: someLabel
+        version: v1alpha1
+    spec:
+      containers:
+      - name: resource
+        image: busybox
+        command:
+        - sleep
+        - "55"
+      restartPolicy: OnFailure
